@@ -1,0 +1,48 @@
+{
+  "name": "fullstack-boilerplate",
+  "version": "1.0.0",
+  "description": "nodejs fullstack web boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sherdeadlock",
+  "license": "ISC",
+  "repository": "https://github.com/btrie/fullstack-boilerplate",
+  "devDependencies": {
+    "autoprefixer": "^6.5.0",
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "babel-plugin-transform-react-inline-elements": "^6.8.0",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "css-loader": "^0.25.0",
+    "file-loader": "^0.9.0",
+    "morgan": "^1.7.0",
+    "node-sass": "^3.10.1",
+    "nodemon": "^1.11.0",
+    "postcss-loader": "^0.13.0",
+    "resolve-url-loader": "^1.6.0",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.2",
+    "webpack-dev-middleware": "^1.8.4",
+    "webpack-hot-middleware": "^2.12.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "bootstrap-sass": "^3.3.7",
+    "compression": "^1.6.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.14.0",
+    "hbs": "^4.0.1",
+    "ionicons": "^3.0.0",
+    "react": "^15.3.2",
+    "react-bootstrap": "^0.30.5",
+    "react-dom": "^15.3.2",
+    "react-router": "^4.0.0-alpha.4",
+    "serve-favicon": "^2.3.0"
+  }
+}
