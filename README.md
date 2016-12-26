@@ -4,3 +4,4 @@
 * [x] [nodejs websocket](./node_websocket)
 * [x] [react server render](./react_server_render)
 * [ ] [nodejs c/c++ addon](./node_addon)
+* [x] [stock chart demo](http://sherdeadlock.github.io/demo/demo_tachart/)
