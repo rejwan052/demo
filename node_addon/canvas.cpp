@@ -6,25 +6,26 @@ using std::endl;
 using namespace btrie;
 
 
-Path *Path::move(double x, double y) {
+Path* Path::move(double x, double y) {
     cout << "move(" << x << ", " << y << ")" << endl;
     return this;
 }
 
-Path *Path::line(double x, double y) {
+Path* Path::line(double x, double y) {
     cout << "line(" << x << ", " << y << ")" << endl;
     return this;
 }
 
-Path *Path::close() {
+Path* Path::close() {
     cout << "close" << endl;
     return this;
 }
+
 
 Canvas::Canvas(double width, double height): 
     _width(width), _height(height) {
 }
 
-void Canvas::draw(Path& path) {
+void Canvas::draw(Path* path) {
     cout << "Widht=" << _width << " height=" << _height << endl;
 }
