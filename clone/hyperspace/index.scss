@@ -54,6 +54,16 @@ $sidebar-top: 15em;
 
 // ------------------------------------------------------
 
+.github-ribbons {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: $zindex-navbar-fixed;
+  border: 0;
+}
+
+// ------------------------------------------------------
+
 body {
   position: relative;
 }
