@@ -169,7 +169,7 @@ sup {
 
 
 <div>
-<sup>此文件用 Markdown 編寫於 October 10, 2016</sup>
+<sup>此文件用 Markdown 更新於 JAN 5, 2017</sup>
 </div>
 
 
@@ -215,7 +215,7 @@ sup {
 喜歡 Web, ReactJS 技術開發跨平台產品。</p>
 
 <p>閒暇之餘，學習如何用 python 分析股票和爬資料，使用 <a href="https://mariadb.com/" title="MariaDB">MariaDB</a>, <a href="https://www.mongodb.com/" title="MongoDB">MongoDB</a> 存交易資料, 對 <a href="http://www.numpy.org/" title="NumPy">numpy</a>, <a href="http://pandas.pydata.org/" title="pandas">pandas</a>, <a href="http://matplotlib.org/" title="matplotlib">matplotlib</a> 有些基礎，
-規劃未來繼續往 Machine Learning 深入。</p>
+規劃未來研究 Machine Learning。</p>
 
 <p>DevOps 部分，在 Linux 使用 <a href="https://jenkins.io/" title="Jenkins">Jenkins</a>, <a href="https://git-scm.com/" title="Git">Git</a>, <a href="https://www.docker.com/" title="Docker">Docker</a>, <a href="http://www.redmine.org/" title="Redmine">Redmine</a>, <a href="http://www.sonatype.org/nexus/" title="Nexus Sonatype">Nexus</a> 架設開發環境。 熟悉語言編譯, 套件管理系統,
 例如：<a href="https://www.gnu.org/software/make/manual/make.html" title="Makefile">Makefile</a>, <a href="https://maven.apache.org/" title="Maven">Maven</a>, <a href="https://www.npmjs.com/" title="npm">npm</a>, <a href="https://webpack.github.io/" title="webpack">Webpack</a> ... 等。</p>
@@ -240,7 +240,9 @@ sup {
 
 <h3>1. Script Language Compiler (交易策略)</h3>
 
-<p>實作TradeStation公司開發的程式交易語言(EasyLanguage), 範例如下：</p>
+<p>實作TradeStation公司開發的程式交易語言(EasyLanguage)。</p>
+
+<p>範例如下：</p>
 
 <pre><code>if the Close &gt; High of 1 bar ago then Buy next bar at market;
 </code></pre>
@@ -249,7 +251,7 @@ sup {
 
 <ul>
 <li>C#, C++</li>
-<li><a href="http://www.goldparser.org/" title="GOLD Parser">GOLD Parser</a></li>
+<li>GOLD Parser</li>
 </ul>
 
 
@@ -257,11 +259,29 @@ sup {
 
 <p>從資料源接收即時成交資料，處理後透過 TCP, HTTP, WebSocket 送給 Client。</p>
 
+<p>工作內容大致如下：</p>
+
+<ul>
+<li>netty 接現有 Server 資料， 解公司自訂的TCP封包。</li>
+<li>用 Actor(akka)架構計算資料</li>
+<li>處理三種 Client 連線(TCP, WebSocket, HTTP long polling 模擬雙向), 提供上層同一個介面，不需處理不同 Client。</li>
+<li>連線加密，用 RSA say hello 認證是否自己發行的 Client 的連線，登入之後採 AES 加密連線。</li>
+<li>參與 Framework 開發, 類似 Web Framework, 用到以上提到的功能，為了 WEB 與 APP Client 開發的, 功能：
+
+<ul>
+<li>Container/User Session</li>
+<li>RPC</li>
+<li>Model 自動比對只送出有更新的資料</li>
+</ul>
+</li>
+</ul>
+
+
 <p>相關技術：</p>
 
 <ul>
 <li>Java</li>
-<li><a href="http://netty.io/" title="Netty">Netty</a>, <a href="http://akka.io/" title="akka">Akka</a>, <a href="https://eclipse.org/aspectj/" title="AspectJ">Aspectj</a></li>
+<li><a href="http://netty.io/" title="Netty">Netty</a>, <a href="http://akka.io/" title="akka">Akka</a>, <a href="https://eclipse.org/aspectj/" title="AspectJ">Aspectj</a>, <a href="https://eclipse.org/jetty/">Jetty</a></li>
 </ul>
 
 
@@ -277,6 +297,7 @@ sup {
 <li><a href="http://www.eclipse.org/e4/" title="Eclipse E4">Eclipse E4</a></li>
 <li><a href="http://www.eclipse.org/birt/" title="Eclipse BIRT">Eclipse BIRT</a></li>
 <li><a href="http://www.jooq.org/" title="jOOQ">jOOQ (SQL)</a>/SQLite</li>
+<li><a href="https://poi.apache.org/">Apache POI</a> 讀取 excel</li>
 </ul>
 
 
@@ -370,7 +391,7 @@ sup {
 
 
 <div>
-<sup>此文件用 Markdown 編寫於 October 10, 2016</sup>
+<sup>此文件用 Markdown 更新於 JAN 5, 2017</sup>
 </div>
 
 
