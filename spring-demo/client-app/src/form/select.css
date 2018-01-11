@@ -1,0 +1,11 @@
+.Select.form-control {
+	padding: 0;
+}
+
+.Select.form-control > .Select-control {
+	border: none;
+}
+
+.Select.form-control > .Select-menu-outer {
+	z-index: 1000;
+}

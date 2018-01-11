@@ -1,0 +1,21 @@
+.breadcrumb-container {
+	display: flex;
+}
+
+.breadcrumb-container > .breadcrumb {
+	flex: 1;
+}
+
+.breadcrumb-container > .toolbar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 0 1.5rem 0;
+	padding-right: 1rem;
+	background: white;
+	border-bottom: 1px solid #c2cfd6;
+}
+
+.breadcrumb-container > .toolbar > .btn {
+	padding: 0.35rem 1rem;
+}

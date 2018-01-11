@@ -1,0 +1,14 @@
+.product {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	min-height: 0;
+}
+
+div.product__content {
+	flex: 1 1;
+	overflow: hidden;
+	min-height: 0;
+}

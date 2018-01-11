@@ -1,0 +1,26 @@
+.search-bar {
+	margin-bottom: 1.5rem;
+}
+
+.search-bar__adv-form.card {
+	border-top: none;
+	padding-top: 1.5rem;
+	padding-bottom: .5rem;
+	margin-bottom: 0;
+}
+
+.search-bar__adv-form .input-group {
+	padding-bottom: 1rem;
+}
+
+.search-bar__search-btn {
+	min-width: 5rem;
+}
+
+.search-bar__search-adv {
+	min-width: 5rem;
+}
+
+.search-bar__clear {
+	min-width: 5rem;
+}
