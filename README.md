@@ -6,6 +6,7 @@
 * [x] [nodejs websocket](./node_websocket)
 * [x] [react server render](./react_server_render)
 * [x] [nodejs c/c++ addon](./node_addon)
+* [x] [spring demo](./spring-demo)
 
 
 # front-end demo
