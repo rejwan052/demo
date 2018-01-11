@@ -1,3 +1,5 @@
+* [resume](http://sherdeadlock.github.io/demo/resume)
+
 # back-end demo
 
 * [x] [nodejs express](./node_express)
