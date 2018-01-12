@@ -1,6 +1,6 @@
 # Spring Demo
 
-用 spring Boot 與 ReactJS 實作簡易庫存系統。
+用 spring Boot 與 ReactJS 實作簡易庫存系統。前端使用 Core UI 修改而成。
 
 [影片](https://youtu.be/01mFXafiWX0)
 
