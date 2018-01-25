@@ -169,6 +169,11 @@ sup {
 
 
 <div>
+<sup>手機: 0963162429</sup>
+</div>
+
+
+<div>
 <sup>此文件用 Markdown 更新於 2017/12/24</sup>
 </div>
 
@@ -183,9 +188,9 @@ sup {
 <li>工作
 
 <ol>
-<li> Script Language Compiler (交易策略)</li>
-<li> Real Time Quote Server (股票即時報價系統)</li>
-<li> Business Intelligence and Analytics (資料視覺化)</li>
+<li> 交易策略 Script Transpiler</li>
+<li> 股票即時報價系統</li>
+<li> 資料視覺化</li>
 <li> 電商前後台系統</li>
 <li> 爬蟲與PDF OCR</li>
 <li> 零件倉儲系統</li>
@@ -195,8 +200,8 @@ sup {
 
 <ol>
 <li> 計算機</li>
-<li> Stock Chart Web(股票技術分析 Web版)</li>
-<li> Stock Chart App(股票技術分析 Mobile版)</li>
+<li> 股票技術分析 Web版</li>
+<li> 股票技術分析 React-Native 版</li>
 <li> front-end</li>
 </ol>
 </li>
@@ -214,10 +219,9 @@ sup {
 
 <p>我是林承毅，1988年屏東出生，南部就學與工作，就業期間也到台北三年。</p>
 
-<p>習慣 Mac, Linux 平台，熟悉 C, Java, JS, Web 開發過 Linux Driver, application server, Socket。
-工作接觸 Spring, Hibernate 後，覺得實用而開始深入 Spring 框架。</p>
+<p>習慣 Mac, Linux 平台，熟悉 C, Java, JS, Web 開發過 Linux Driver(碩士論文), Application Server(股票資料傳輸，進銷存內部系統), Socket(Netty)。工作接觸 Spring, Hibernate 後，覺得實用而開始深入 Spring 框架。</p>
 
-<p>閒暇之餘，學習如何用 python 分析股票和爬資料，使用 <a href="https://mariadb.com/" title="MariaDB">MariaDB</a>, <a href="https://www.mongodb.com/" title="MongoDB">MongoDB</a> 存交易資料, 對 <a href="http://www.numpy.org/" title="NumPy">numpy</a>, <a href="http://pandas.pydata.org/" title="pandas">pandas</a>, <a href="http://matplotlib.org/" title="matplotlib">matplotlib</a> 有些基礎，
+<p>閒暇之餘，學習如何用 Python 分析股票和爬資料，使用 <a href="https://mariadb.com/" title="MariaDB">MariaDB</a>, <a href="https://www.mongodb.com/" title="MongoDB">MongoDB</a> 存交易資料, 對 <a href="http://www.numpy.org/" title="NumPy">numpy</a>, <a href="http://pandas.pydata.org/" title="pandas">pandas</a>, <a href="http://matplotlib.org/" title="matplotlib">matplotlib</a> 有些基礎，
 朝 Machine Learning 緩慢前進。</p>
 
 <p>DevOps 部分，在 Linux 使用 <a href="https://jenkins.io/" title="Jenkins">Jenkins</a>, <a href="https://git-scm.com/" title="Git">Git</a>, <a href="https://www.docker.com/" title="Docker">Docker</a>, <a href="http://www.redmine.org/" title="Redmine">Redmine</a>, <a href="http://www.sonatype.org/nexus/" title="Nexus Sonatype">Nexus</a> 架設開發環境。 熟悉語言編譯, 套件管理系統,
@@ -255,7 +259,7 @@ sup {
 
 <ul>
 <li>英文只擅長讀，其他聽說寫加強中。</li>
-<li>工作幾乎只用到資料結構，演算法和數學需要加強，有規劃 UVa Online Judge 刷題。</li>
+<li>工作幾乎只用到資料結構，需要加強演算法和數學。</li>
 <li>表達與簡報能力需要加強。</li>
 </ul>
 </li>
@@ -275,15 +279,15 @@ sup {
 <li>註：大四(1年), 研究所(2年), 研替(3年)。</li>
 </ul>
 </li>
-<li><a href="https://fruitpay.com.tw" title="果物配">果物配(電商)</a> 2017/02 ~ 2017/08</li>
+<li><a href="https://fruitpay.com.tw" title="果物配">騰勢股份(電商)</a> 2017/02 ~ 2017/08</li>
 </ul>
 
 
 <h1>工作</h1>
 
-<h3>1. Script Language Compiler (交易策略) (嘉實資訊)</h3>
+<h3>1. 交易策略 Script Transpiler (嘉實資訊)</h3>
 
-<p>實作TradeStation公司開發的程式交易語言(EasyLanguage)。</p>
+<p>實作TradeStation公司開發的程式交易語言(EasyLanguage)。負責建立 Syntax Tree, C++ Code Generation, C++ Runtime.</p>
 
 <p>範例如下：</p>
 
@@ -303,16 +307,17 @@ End;
 </ul>
 
 
-<h3>2. Real Time Quote Server (股票即時報價系統) (嘉實資訊)</h3>
+<h3>2. 股票即時報價系統 (嘉實資訊)</h3>
 
-<p>從資料源接收即時成交資料，處理後透過 TCP, HTTP, WebSocket 送給 Client。</p>
+<p>從資料源接收即時成交資料，計算資料後，使用 Netty 透過 TCP, HTTP, WebSocket 送給 Client。
+需求是 Response Time 200 millisecond。</p>
 
 <p>工作內容：</p>
 
 <ul>
-<li>netty 接現有 Server 資料， 解公司自訂的TCP封包。</li>
-<li>用 Actor(akka)架構計算股票資料</li>
-<li>處理三種 Client 連線(TCP, WebSocket, HTTP long polling 模擬雙向), 提供上層同一個介面處理這三種 Client。</li>
+<li>Netty 接現有 Server 資料， 解公司自訂的TCP封包。</li>
+<li>用 Actor(akka) 計算股票資料。</li>
+<li>提供上層同一個介面處理這三種 Client 連線(TCP, WebSocket, HTTP long polling 模擬雙向)。</li>
 <li>連線加密，用 RSA 認證是否自己發行的 Client 的連線，登入成功之後採 AES 加密連線。</li>
 <li>參與 Framework 開發, 類似 Web Framework, 用到以上提到的功能，為了 WEB 與 APP Client 開發的, 功能：
 
@@ -330,7 +335,7 @@ End;
 
 <ul>
 <li>VisualVM 監控 CPU,MEM,GC, 看 stacktrace 抓 deadlock(netty throws DeadLockException)。</li>
-<li>Dump JVM Heap 後用 Eclipse Memory Analyzer 找 memory leak。</li>
+<li>jmap Dump JVM Heap 後用 Eclipse Memory Analyzer 觀察記憶體佔比例異常的區塊，再觀察程式碼查 Memory Leak。</li>
 <li>搭配網頁（jetty) 觀察 server 資訊，ex: server本身連線數，user數，和其他台server的資訊。</li>
 </ul>
 
@@ -339,11 +344,11 @@ End;
 
 <ul>
 <li>Java</li>
-<li><a href="http://netty.io/" title="Netty">Netty</a>, <a href="http://akka.io/" title="akka">Akka</a>, <a href="https://eclipse.org/aspectj/" title="AspectJ">Aspectj</a>, <a href="https://eclipse.org/jetty/">Jetty</a></li>
+<li><a href="http://netty.io/" title="Netty">Netty</a>, <a href="http://akka.io/" title="akka">Akka</a>, <a href="https://eclipse.org/aspectj/" title="AspectJ">Aspectj</a></li>
 </ul>
 
 
-<h3>3. Business Intelligence and Analytics (資料視覺化) (嘉實資訊)</h3>
+<h3>3. 資料視覺化 (嘉實資訊)</h3>
 
 <p>協助客戶分析資料，導入資料後圖形化顯示（Pivot Table)。</p>
 
@@ -351,9 +356,7 @@ End;
 
 <ul>
 <li><a href="https://www.eclipse.org/swt/" title="SWT">SWT (The Standard Widget Toolkit)</a>, <a href="https://wiki.eclipse.org/JFace" title="JFace">JFace</a></li>
-<li><a href="https://wiki.eclipse.org/Rich_Client_Platform" title="Eclipse RCP">Eclipse RCP (Rich Client Platform)</a></li>
-<li><a href="http://www.eclipse.org/e4/" title="Eclipse E4">Eclipse E4</a></li>
-<li><a href="http://www.eclipse.org/birt/" title="Eclipse BIRT">Eclipse BIRT</a></li>
+<li><a href="https://wiki.eclipse.org/Rich_Client_Platform" title="Eclipse RCP">Eclipse RCP (Rich Client Platform)</a> / <a href="http://www.eclipse.org/e4/" title="Eclipse E4">Eclipse E4</a> / <a href="http://www.eclipse.org/birt/" title="Eclipse BIRT">Eclipse BIRT</a></li>
 <li><a href="http://www.jooq.org/" title="jOOQ">jOOQ (SQL)</a>/SQLite</li>
 <li><a href="https://poi.apache.org/">Apache POI</a> 讀取 excel</li>
 </ul>
@@ -362,12 +365,12 @@ End;
 <!--![image](./subjects/business_intelligence/2_import_excel.png =800x)-->
 
 
-<p><img src="./subjects/business_intelligence/3_chart.png" width="800" alt="image" /></p>
+<p><img src="./subjects/business_intelligence/3_chart.png" width="700" alt="image" /></p>
 
 <!--![image](./subjects/business_intelligence/4_table.png =800x)-->
 
 
-<h3>4. 電商前後台系統（果物配）</h3>
+<h3>4. 電商前後台系統（騰勢）</h3>
 
 <ul>
 <li>伺服器架構調整：調整伺服器架構，可因應活動新增機器（人為介入,非自動增減機器）。</li>
@@ -385,8 +388,7 @@ End;
 <ul>
 <li><a href="http://tomcat.apache.org/" title="Tomcat">tomcat</a></li>
 <li><a href="https://nginx.org" title="Nginx">nginx</a></li>
-<li><a href="https://projects.spring.io/spring-framework/" title="Spring Framework">spring</a></li>
-<li><a href="http://hibernate.org/" title="Hibernate">hibernate</a></li>
+<li><a href="https://projects.spring.io/spring-framework/" title="Spring Framework">spring</a> / <a href="http://hibernate.org/" title="Hibernate">hibernate</a></li>
 <li><a href="https://angularjs.org/" title="Angular JS">angularjs</a></li>
 <li><a href="https://www.mysql.com/">mysql</a></li>
 </ul>
@@ -421,21 +423,18 @@ PDF 處理方式，先轉成灰階圖檔，辨識表格，切割成 Cell 再透�
 
 <ul>
 <li><a href="https://kotlinlang.org/" title="Kotlin">kotlin</a></li>
-<li><a href="https://projects.spring.io/spring-boot/" title="Spring Boot">spring-boot</a></li>
-<li><a href="https://projects.spring.io/spring-security/" title="Spring Security">spring-security</a></li>
-<li><a href="http://hibernate.org/search/">hibernate-search</a></li>
-<li><a href="https://reactjs.org/">reactjs</a></li>
-<li><a href="https://www.typescriptlang.org/">typescript</a></li>
+<li><a href="https://projects.spring.io/spring-boot/" title="Spring Boot">spring-boot</a> / <a href="https://projects.spring.io/spring-security/" title="Spring Security">spring-security</a> / <a href="http://hibernate.org/search/">hibernate-search</a></li>
+<li><a href="https://reactjs.org/">reactjs</a> / <a href="https://www.typescriptlang.org/">typescript</a></li>
 </ul>
 
 
-<p>部分 Demo 程式碼:</p>
+<p>部分 Demo：</p>
 
-<p><a href="https://github.com/sherdeadlock/demo/tree/master/spring-demo">https://github.com/sherdeadlock/demo/tree/master/spring-demo</a></p>
+<ul>
+<li>程式碼：<a href="https://github.com/sherdeadlock/demo/tree/master/spring-demo">https://github.com/sherdeadlock/demo/tree/master/spring-demo</a></li>
+<li>影片：<a href="https://youtu.be/01mFXafiWX0">https://youtu.be/01mFXafiWX0</a></li>
+</ul>
 
-<p>部分 Demo 影片：</p>
-
-<p><a href="https://youtu.be/01mFXafiWX0"><img src="./subjects/spring-demo/spring-demo.jpg" width="500" alt="IMAGE ALT TEXT HERE" /></a></p>
 
 <h1>作品</h1>
 
@@ -455,7 +454,7 @@ PDF 處理方式，先轉成灰階圖檔，辨識表格，切割成 Cell 再透�
 <img src="./subjects/calculator/tc_2_setting.png" width="200" alt="image" />
 <img src="./subjects/calculator/tc_3_dialog.png" width="200" alt="image" /></p>
 
-<h3>2. Stock Chart Web(股票技術分析 web版)</h3>
+<h3>2. 股票技術分析 web版</h3>
 
 <p><a href="https://sherdeadlock.github.io/demo/demo_tachart">demo</a></p>
 
@@ -469,7 +468,7 @@ PDF 處理方式，先轉成灰階圖檔，辨識表格，切割成 Cell 再透�
 
 <p><a href="https://sherdeadlock.github.io/demo/demo_tachart"><img src="./subjects/web_ta/web_ta_3.png" width="600" alt="image" /></a></p>
 
-<h3>3. Stock Chart App(股票技術分析 Mobile版)</h3>
+<h3>3. 股票技術分析 React-Native 版</h3>
 
 <p>相關技術：</p>
 
@@ -479,7 +478,7 @@ PDF 處理方式，先轉成灰階圖檔，辨識表格，切割成 Cell 再透�
 </ul>
 
 
-<p><img src="./subjects/app_ta/app_ta_1.png" width="300" alt="image" /></p>
+<p><img src="./subjects/app_ta/app_ta_1.png" width="200" alt="image" /></p>
 
 <h3>4. front-end</h3>
 
@@ -494,7 +493,12 @@ PDF 處理方式，先轉成灰階圖檔，辨識表格，切割成 Cell 再透�
 
 <h3>1. 學士專題</h3>
 
-<p>使用 <a href="http://www.nvidia.com.tw/object/cuda-parallel-computing-platform-tw.html" title="CUDA">CUDA</a> 平行化 <a href="https://en.wikipedia.org/wiki/Aho%E2%80%93Corasick_algorithm" title="Aho-Corasick">Aho-Corasick</a>, <a href="http://webglimpse.net/pubs/TR94-17.pdf" title="Wu-Manber">Wu-Manber</a> 兩種字串搜尋演算法，並比較其優缺點。</p>
+<p>使用 <a href="http://www.nvidia.com.tw/object/cuda-parallel-computing-platform-tw.html" title="CUDA">CUDA</a> 實作 <a href="https://en.wikipedia.org/wiki/Aho%E2%80%93Corasick_algorithm" title="Aho-Corasick">Aho-Corasick</a>, <a href="http://webglimpse.net/pubs/TR94-17.pdf" title="Wu-Manber">Wu-Manber</a> 兩種字串搜尋演算法，並比較其優缺點。</p>
+
+<ul>
+<li><a href="https://drive.google.com/file/d/1d3Di5di_IeYziCQLQZXNXz6Er89vWW0k/view?usp=sharing">專題報告</a></li>
+</ul>
+
 
 <h3>2. 碩士論文</h3>
 
@@ -517,6 +521,11 @@ PDF 處理方式，先轉成灰階圖檔，辨識表格，切割成 Cell 再透�
 
 <div>
 <sup>E-mail: t0963162429@gmail.com</sup>
+</div>
+
+
+<div>
+<sup>手機: 0963162429</sup>
 </div>
 
 
