@@ -2,13 +2,14 @@
 
 # back-end demo
 
-* [x] [nodejs express](./node_express)
-* [x] [nodejs websocket](./node_websocket)
-* [x] [react server render](./react_server_render)
-* [x] [nodejs c/c++ addon](./node_addon)
-* [x] [spring demo](./spring-demo)
+* [nodejs express](./node_express)
+* [nodejs websocket](./node_websocket)
+* [react server render](./react_server_render)
+* [nodejs c/c++ addon](./node_addon)
+* [spring demo](./spring-demo)
+* [Spring MVC and JSP](./spring-mvc-demo)
 
 
 # front-end demo
-* [x] [stock chart demo](http://sherdeadlock.github.io/demo/demo_tachart/)
-* [ ] [html5up hyperspace clone](https://sherdeadlock.github.io/demo/clone/hyperspace-dist/)
+* [stock chart demo](http://sherdeadlock.github.io/demo/demo_tachart/)
+* [html5up hyperspace clone](https://sherdeadlock.github.io/demo/clone/hyperspace-dist/)
