@@ -11,6 +11,7 @@ public class FaradayApplication {
 	@Bean
 	public CommandLineRunner init(ProductStore store) {
 		return (String... args) -> {
+			// Generate test fixtures
 			for (int i = 1; i < 100; i++) {
 				Product product = new Product();
 				product.setName("P" + i);
